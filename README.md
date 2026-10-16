@@ -48,9 +48,11 @@ The workflow moves from business questions and data inspection through preparati
 
 ## Dashboard
 
-![Medical Equipment Procurement Analysis dashboard](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/download/v1.0.0/medical-procurement-dashboard.jpg)
+![Medical Equipment Procurement Analysis dashboard preview](dashboard/dashboard-preview.svg)
 
-[Open or download the dashboard screenshot](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/download/v1.0.0/medical-procurement-dashboard.jpg) · [View release assets](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/tag/v1.0.0)
+[Open or download the actual dashboard screenshot](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/download/v1.0.0/medical-procurement-dashboard.jpg) · [View release assets](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/tag/v1.0.0)
+
+*The embedded visual is a conceptual layout preview; the actual dashboard screenshot is available through the link above.*
 
 ## Key Observations
 
