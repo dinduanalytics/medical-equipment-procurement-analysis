@@ -1,11 +1,15 @@
 # Data Folder
 
-Place only a copy of the procurement workbook cleared for public sharing in this folder.
+This folder is intended for the public-safe procurement dataset only. Do not commit the unredacted source workbook because it contains supplier contact information.
 
-## Before publishing
+## Generate the sanitized workbook
 
-The original workbook includes supplier contact names, phone numbers, and email addresses. Remove or anonymise those fields before committing a public copy unless you have confirmed permission to publish them.
+Place your original `Procurement Dataset.xlsx` outside the public repository or in a local working folder, then run:
 
-Suggested sanitized filename: `procurement_dataset_sanitized.xlsx`
+```bash
+python scripts/sanitize_dataset.py "Procurement Dataset.xlsx"
+```
 
-Keep the original working copy separate. Use a separate sanitized file for GitHub.
+The script writes `data/procurement_dataset_sanitized.xlsx`, retaining the procurement table while excluding supplier contact, phone, and email fields. It also normalizes column headings and removes empty columns and unrelated worksheets.
+
+Review the generated file before committing it. The repository does not currently include a sanitized workbook binary; the script is provided so the copy can be created and checked safely.
