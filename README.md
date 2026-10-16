@@ -54,7 +54,9 @@ The analysis compares records by hospital, department, equipment type, supplier,
 
 ## Dashboard Preview
 
-The cover above introduces the areas explored in the dashboard. The full dashboard screenshot is planned as a separate repository asset; it has not yet been committed as an image file. The original workbook's Pivot and Dashboard tabs were not populated as normal cell tables when inspected, so the supplied screenshot is the visual evidence for the dashboard layout.
+![Medical procurement dashboard layout recreation](dashboard/dashboard-preview.svg)
+
+The visual above is a **conceptual vector recreation of the supplied dashboard layout**, not the original screenshot and not a newly calculated dashboard. The original screenshot shows the KPI values recorded in the reconciliation section below. Chart bars in the recreation are schematic, and the supplier names have been replaced with generic labels. Use the original workbook and screenshot to verify each displayed figure before drawing conclusions.
 
 ## Source-Data Observations
 
@@ -93,6 +95,9 @@ Recommendations should be tied to figures visible in the final workbook, and sho
 |---|---|
 | `README.md` | Main case study and project cover |
 | `dashboard/project-cover.svg` | Visual cover graphic |
+| `dashboard/dashboard-preview.svg` | Conceptual dashboard layout recreation (not a source screenshot) |
+| `scripts/sanitize_dataset.py` | Script to prepare a public-safe workbook copy |
+| `analysis/README.md` | Calculation and validation notes |
 | `docs/project-brief.md` | Field descriptions and original analysis questions |
 | `docs/data-dictionary.md` | Field-level definitions and sanitization notes |
 | `docs/data-quality-and-reconciliation.md` | Recalculated metrics and KPI differences |
@@ -102,7 +107,7 @@ Recommendations should be tied to figures visible in the final workbook, and sho
 
 ## Data Privacy
 
-The source workbook contains supplier contact names, phone numbers, and emails. Do not publish the original workbook without permission to share these details. The repository documents the analysis and source definitions without reproducing those contact details.
+The source workbook contains supplier contact names, phone numbers, and emails. Do not publish the original workbook without permission to share these details. The repository does not include the unredacted workbook. To generate a public-safe copy locally, run `python scripts/sanitize_dataset.py "Procurement Dataset.xlsx"`; this writes `data/procurement_dataset_sanitized.xlsx` after excluding supplier contact fields. Review the output before publishing.
 
 ## Limitations
 
@@ -113,4 +118,4 @@ The source workbook contains supplier contact names, phone numbers, and emails. 
 
 ---
 
-*This case study documents the path from procurement questions to data validation and visual analysis. It will be updated as the workbook calculations and project assets are finalised.*
+*This case study documents the path from procurement questions to data validation and visual analysis. KPI reconciliation remains an explicit limitation.*
