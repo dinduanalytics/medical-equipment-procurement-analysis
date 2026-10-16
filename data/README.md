@@ -1,15 +1,15 @@
-# Data Folder
+# Public Dataset
 
-This folder is intended for the public-safe procurement dataset only. Do not commit the unredacted source workbook because it contains supplier contact information.
+The public-use Excel workbook is available in the [v1.0.0 project release](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/tag/v1.0.0).
 
-## Generate the sanitized workbook
+**[Download the sanitized procurement dataset](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/download/v1.0.0/procurement_dataset_sanitized.xlsx)**
 
-Place your original `Procurement Dataset.xlsx` outside the public repository or in a local working folder, then run:
+The workbook contains 260 procurement records and excludes supplier contact names, phone numbers, and email addresses. The original source workbook should remain private unless permission to publish its contact information has been confirmed.
+
+The sanitization script is available at [scripts/sanitize_dataset.py](../scripts/sanitize_dataset.py). To create another public-use copy locally, run:
 
 ```bash
 python scripts/sanitize_dataset.py "Procurement Dataset.xlsx"
 ```
 
-The script writes `data/procurement_dataset_sanitized.xlsx`, retaining the procurement table while excluding supplier contact, phone, and email fields. It also normalizes column headings and removes empty columns and unrelated worksheets.
-
-Review the generated file before committing it. The repository does not currently include a sanitized workbook binary; the script is provided so the copy can be created and checked safely.
+Review the generated workbook before sharing it.
