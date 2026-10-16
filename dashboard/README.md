@@ -1,11 +1,10 @@
 # Dashboard Assets
 
-Place an exported screenshot of the completed Medical Equipment Procurement Dashboard in this folder.
+- `project-cover.svg` is the visual cover used in the main README.
+- `dashboard-preview.svg` is a conceptual vector recreation of the dashboard layout based on the supplied screenshot. It is not the original screenshot, and its chart bars are schematic.
 
-Recommended filename: `medical-procurement-dashboard.png`
+## Final dashboard screenshot
 
-Use a clear, readable export showing the full dashboard canvas. After uploading, embed it in the main project README using:
+The original dashboard screenshot is still a separate asset that should be added here when the binary image can be uploaded. Recommended filename: `medical-procurement-dashboard.jpg`.
 
-`![Medical Equipment Procurement Dashboard](dashboard/medical-procurement-dashboard.png)`
-
-Do not report dashboard KPIs or insights in the README until they have been checked against the workbook calculations.
+Before publishing final insights, reconcile the KPI cards against the source workbook. See [`../docs/data-quality-and-reconciliation.md`](../docs/data-quality-and-reconciliation.md).
