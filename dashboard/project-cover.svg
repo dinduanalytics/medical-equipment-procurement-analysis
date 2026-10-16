@@ -30,6 +30,6 @@
   <text x="616" y="315" font-size="13" font-weight="700" fill="#52705d" letter-spacing="1">SUPPLIER PERFORMANCE</text>
   <text x="616" y="343" font-size="19" font-weight="700" fill="#173e2e">Delivery-time analysis</text>
   <text x="890" y="315" font-size="13" font-weight="700" fill="#52705d" letter-spacing="1">LIFECYCLE COSTS</text>
-  <text x="890" y="343" font-size="19" font-weight="700" fill="#173e2e">Maintenance & installation</text>
+  <text x="890" y="343" font-size="19" font-weight="700" fill="#173e2e">Maintenance &amp; installation</text>
 </g>
 </svg>
