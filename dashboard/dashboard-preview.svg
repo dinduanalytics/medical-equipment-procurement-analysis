@@ -15,16 +15,16 @@
 <rect class="panel" x="968" y="84" width="208" height="94" rx="10"/><rect class="green" x="968" y="84" width="208" height="8" rx="4"/><text class="label" x="986" y="112">AVERAGE UNIT PRICE</text><text class="value" x="986" y="145">$37,519</text><text class="tiny" x="986" y="163">Displayed dashboard value</text>
 </g>
 <!-- top left hospital bar chart -->
-<rect class="panel" x="24" y="196" width="560" height="250" rx="12"/><text class="label" x="44" y="223">TOP SPENDING HOSPITALS</text><text class="tiny" x="44" y="241">Procurement amount (as shown in dashboard)</text>
+<rect class="panel" x="24" y="196" width="560" height="250" rx="12"/><text class="label" x="44" y="223">TOP SPENDING HOSPITALS</text><text class="tiny" x="44" y="241">Schematic ranking only — values omitted</text>
 <g class="small">
-<text x="44" y="274">Minna Federal Medical Center</text><rect class="bar" x="235" y="260" width="280" height="17" rx="3"/><text x="525" y="273" text-anchor="end" fill="#fff">1.8M</text>
-<text x="44" y="306">Dutse General Hospital</text><rect class="bar" x="235" y="292" width="230" height="17" rx="3"/><text x="457" y="305" text-anchor="end" fill="#fff">1.5M</text>
-<text x="44" y="338">Gusau General Hospital</text><rect class="bar" x="235" y="324" width="205" height="17" rx="3"/><text x="432" y="337" text-anchor="end" fill="#fff">1.3M</text>
-<text x="44" y="370">Katsina Federal Medical Center</text><rect class="bar" x="235" y="356" width="185" height="17" rx="3"/><text x="412" y="369" text-anchor="end" fill="#fff">1.2M</text>
-<text x="44" y="402">Umuahia General Hospital</text><rect class="bar" x="235" y="388" width="150" height="17" rx="3"/><text x="377" y="401" text-anchor="end" fill="#fff">1.0M</text>
+<text x="44" y="274">Minna Federal Medical Center</text><rect class="bar" x="235" y="260" width="280" height="17" rx="3"/><text x="525" y="273" text-anchor="end" fill="#fff">—</text>
+<text x="44" y="306">Dutse General Hospital</text><rect class="bar" x="235" y="292" width="230" height="17" rx="3"/><text x="457" y="305" text-anchor="end" fill="#fff">—</text>
+<text x="44" y="338">Gusau General Hospital</text><rect class="bar" x="235" y="324" width="205" height="17" rx="3"/><text x="432" y="337" text-anchor="end" fill="#fff">—</text>
+<text x="44" y="370">Katsina Federal Medical Center</text><rect class="bar" x="235" y="356" width="185" height="17" rx="3"/><text x="412" y="369" text-anchor="end" fill="#fff">—</text>
+<text x="44" y="402">Umuahia General Hospital</text><rect class="bar" x="235" y="388" width="150" height="17" rx="3"/><text x="377" y="401" text-anchor="end" fill="#fff">—</text>
 </g>
 <!-- equipment -->
-<rect class="panel" x="600" y="196" width="270" height="250" rx="12"/><text class="label" x="620" y="223">MOST PURCHASED EQUIPMENT</text><text class="tiny" x="620" y="241">Quantity comparison</text>
+<rect class="panel" x="600" y="196" width="270" height="250" rx="12"/><text class="label" x="620" y="223">MOST PURCHASED EQUIPMENT</text><text class="tiny" x="620" y="241">Schematic category comparison — values omitted</text>
 <g><rect class="bar" x="632" y="280" width="40" height="120" rx="3"/><rect class="bar2" x="685" y="302" width="40" height="98" rx="3"/><rect class="bar" x="738" y="318" width="40" height="82" rx="3"/><rect class="bar2" x="791" y="337" width="40" height="63" rx="3"/>
 <text class="tiny" x="652" y="418" text-anchor="middle">Defibrillator</text><text class="tiny" x="705" y="418" text-anchor="middle">Phototherapy</text><text class="tiny" x="758" y="430" text-anchor="middle">Monitor</text><text class="tiny" x="811" y="430" text-anchor="middle">Other</text></g>
 <!-- insight panel -->
