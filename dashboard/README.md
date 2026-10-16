@@ -1,10 +1,9 @@
-# Dashboard Assets
+# Dashboard
 
-- `project-cover.svg` is the visual cover used in the main README.
-- `dashboard-preview.svg` is a conceptual vector recreation of the dashboard layout based on the supplied screenshot. It is not the original screenshot, and its chart bars are schematic.
+The dashboard presents procurement KPIs and comparative views of hospital spending, equipment condition, supplier costs, and delivery time.
 
-## Final dashboard screenshot
+## Dashboard preview
 
-The original dashboard screenshot is still a separate asset that should be added here when the binary image can be uploaded. Recommended filename: `medical-procurement-dashboard.jpg`.
+The [dashboard screenshot](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/download/v1.0.0/medical-procurement-dashboard.jpg) is available as an asset in the public [v1.0.0 release](https://github.com/dinduanalytics/medical-equipment-procurement-analysis/releases/tag/v1.0.0). The repository also includes dashboard-preview.svg, a conceptual vector illustration of the dashboard layout.
 
-Before publishing final insights, reconcile the KPI cards against the source workbook. See [`../docs/data-quality-and-reconciliation.md`](../docs/data-quality-and-reconciliation.md).
+The dashboard values are presented as shown in the supplied screenshot. Source-based calculations are documented separately in [Metric Definitions and Source Comparison](../docs/data-quality-and-reconciliation.md).
