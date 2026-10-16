@@ -40,6 +40,12 @@ The supplied workbook contains **260 records and 19 named fields**. The public c
 
 See the [data dictionary](docs/data-dictionary.md), [project brief](docs/project-brief.md), and [data-quality note](docs/data-quality-and-reconciliation.md).
 
+## Analysis Workflow
+
+![Medical Equipment Procurement Analysis Workflow](docs/analysis-workflow.svg)
+
+The diagram shows the analysis sequence from understanding the business questions through validating the KPIs and communicating recommendations.
+
 ## Analytical Workflow
 
 **Business questions → data inspection → preparation → metric definition → analysis → dashboard → recommendations**
