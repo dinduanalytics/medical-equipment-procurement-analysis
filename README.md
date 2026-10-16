@@ -1,112 +1,114 @@
 # Medical Equipment Procurement Analysis
 
-> A business-focused analysis of medical equipment procurement across hospitals, examining spending, equipment condition, maintenance, installation costs, supplier geography, and delivery performance.
+<p align="center">
+  <strong>Healthcare Procurement · Cost Analysis · Supplier Performance</strong><br/>
+  A business-focused analytics case study exploring procurement spending, equipment condition, maintenance, installation costs, and delivery performance across hospitals.
+</p>
 
-**Author:** Nwaba Chimdindu  
-**Tools:** Microsoft Excel · Power Query · PivotTables · Dashboarding  
-**Project type:** Procurement analytics / operational cost analysis
+<p align="center">
+  <img src="dashboard/medical-procurement-dashboard.jpg" alt="Medical Procurement Dashboard" width="100%" />
+</p>
+
+**Prepared by:** Nwaba Chimdindu  
+**Tools:** Microsoft Excel · PivotTables · Dashboarding  
+**Project type:** Procurement and operational cost analysis
 
 ---
 
 ## Project Overview
 
-Medical equipment procurement involves purchase, installation, and ongoing maintenance costs. This project uses a hospital procurement dataset to investigate questions about spending, equipment condition, supplier geography, and delivery timelines.
+Hospitals depend on reliable medical equipment, timely supplier deliveries, and careful cost management. This project explores a procurement dataset containing hospital, equipment, supplier, cost, condition, warranty, and delivery information.
 
-The objective is to turn procurement records into a decision-focused dashboard that helps stakeholders compare costs, identify patterns, and decide where further review may be useful.
+The analysis is organised around seven business questions from the supplied project brief. The goal is to make procurement patterns easier to examine and support evidence-based discussions about cost management, sourcing and equipment lifecycle planning.
 
 ## Business Questions
 
-The supplied project brief lists seven questions:
-
-1. **Which hospitals spend the most on equipment procurement?**
-2. **What is the distribution of equipment by condition across departments?** Which areas may need upgrades?
-3. **How do maintenance costs vary by equipment type?** Which types are most and least costly to maintain?
-4. **What is the average delivery time for equipment from different suppliers?**
-5. **Which states have the highest installation costs for medical equipment?**
-6. **What proportion of equipment suppliers comes from each country?**
-7. **How does equipment condition vary with installation costs?**
-
-Together, these questions concern procurement efficiency, cost management, supplier performance, and equipment lifecycle management.
+1. Which hospitals spend the most on equipment procurement?
+2. What is the distribution of equipment by condition across departments, and which areas may need upgrades?
+3. How do maintenance costs vary by equipment type?
+4. What is the average delivery time for equipment from different suppliers?
+5. Which states have the highest installation costs for medical equipment?
+6. What proportion of equipment suppliers comes from each country?
+7. How does equipment condition vary with installation costs?
 
 ## Dataset
 
-The supplied workbook has a procurement worksheet with 260 records and 19 columns.
+The supplied workbook contains **260 records and 19 named fields**. The public copy is planned to omit supplier contact names, phone numbers, and email addresses.
 
-| Category | Fields |
+| Field group | Included fields |
 |---|---|
 | Hospital and location | Hospital, State, Location, Department |
-| Equipment details | Equipment, Quantity, Equipment Condition, Warranty Period (Months) |
-| Costs | Unit Price (USD), Maintenance Cost (USD/year), Installation Cost (USD) |
-| Supplier details | Supplier, Supplier Contact, Supplier Phone, Supplier Email, Supplier Country |
-| Order timeline | Date Ordered, Date Delivered |
+| Equipment | Equipment, Quantity, Equipment Condition, Warranty Period (Months) |
+| Cost | Unit Price, Maintenance Cost (USD/year), Installation Cost (USD) |
+| Supplier | Supplier, Supplier Country |
+| Dates | Date Ordered, Date Delivered |
 
-### Data privacy
-
-The original workbook contains supplier contact names, phone numbers, and email addresses. **Do not publish the original workbook publicly without reviewing and removing or anonymising contact details.** Upload only a sanitized copy if the dataset is cleared for public sharing.
+See the [data dictionary](docs/data-dictionary.md) and [original brief transcription](docs/project-brief.md).
 
 ## Analytical Workflow
 
-1. **Understand the questions** — map each question to the relevant fields.
-2. **Inspect the data** — review field meanings, data types, missing values, and consistency.
-3. **Prepare the data** — clean text, check dates, and validate numeric cost fields as needed.
-4. **Define metrics** — document calculations and aggregation choices so figures are reproducible.
-5. **Analyse patterns** — compare hospitals, departments, equipment types, suppliers, states, and supplier countries.
-6. **Visualise results** — use KPIs and charts that fit the question being answered.
-7. **Communicate findings** — explain what the results show and make recommendations supported by the analysis.
+**Business questions → data inspection → preparation → metric definition → analysis → dashboard → recommendations**
 
-## Metric Definitions to Verify
+The analysis groups and compares records by hospital, department, equipment type, supplier, state and supplier country. Delivery time is calculated as the difference between delivery and order dates, and cost measures should use the exact definitions documented in the workbook.
 
-Use the exact calculations from the completed workbook when finalising this section.
+## Dashboard and Current Observations
 
-- **Procurement spend:** confirm the workbook definition. Quantity multiplied by unit price is a possible calculation, but do not assume it matches a separately defined procurement-cost KPI without checking the dashboard formula.
-- **Delivery time (days):** date delivered minus date ordered, after checking missing, reversed, or invalid dates.
-- **Maintenance cost:** the annual maintenance-cost field supplied in the dataset.
-- **Installation cost:** the installation-cost field supplied in the dataset.
-- **Supplier distribution by country:** specify whether the analysis counts records, unique suppliers, or equipment units.
+The dashboard preview above is the visual solution supplied for this project. It shows KPI cards for procurement costs, average delivery time, annual maintenance costs, installation costs and average unit price, along with views of high-spending hospitals, frequently purchased equipment, supplier spend and delivery-time patterns.
 
-Definitions should align with formulas and aggregations in the final dashboard.
+The screenshot currently displays the following headline figures: total procurement cost **$21,639,000**, average delivery time **25 days**, annual maintenance cost **$461,400**, total installation cost **$275,100**, and average unit price **$37,519**. These are transcribed from the visual and remain subject to reconciliation with the source worksheet.
 
-## Dashboard Preview
+### KPI reconciliation note
 
-The dashboard screenshot will be added here once it has been exported and uploaded to this repository.
+Independent calculations from the uploaded source worksheet produce different values for some dashboard cards. For example, the sums of the source maintenance-cost and installation-cost columns are **$462,600** and **$275,700**, respectively. The average of the Unit Price column is **$37,405**. Multiplying each record's quantity by its unit price and summing gives **$20,910,500**. The mean difference between delivery and order dates is approximately **25.30 days**, which is consistent with a rounded display of 25 days.
 
-<!-- After uploading dashboard/medical-procurement-dashboard.png, replace this note with:
-![Medical Equipment Procurement Dashboard](dashboard/medical-procurement-dashboard.png)
--->
+The procurement calculation may use a different definition from `Quantity × Unit Price`. Before treating the displayed and recalculated numbers as reconciled, the workbook's formulas, PivotTable source range, refresh status and dashboard data version should be reviewed. Full details are recorded in [Data Quality and KPI Reconciliation](docs/data-quality-and-reconciliation.md).
 
-## Findings and Recommendations
+## Verified Source-Data Observations
 
-This section should contain findings verified against the completed workbook and dashboard. It is intentionally not filled with assumed results.
+- **260 records** in the Procurement Data worksheet.
+- **92 distinct hospital names**, **35 distinct state values**, **40 distinct supplier names**, and **15 supplier-country values**.
+- Equipment condition counts: **New (124)**, **Used - Good (88)**, **Refurbished (40)** and **Used - Fair (8)**.
+- Delivery minus order date ranges from **23 to 29 days** in the current source; mean delivery time is approximately **25.30 days**.
+- By the specific measure `Quantity × Unit Price`, the highest hospital totals begin with Minna Federal Medical Center (**$1,815,000**), Yenagoa Medical Center (**$1,434,000**) and Dutse General Hospital (**$1,335,000**).
 
-For each major finding, document:
+These are descriptive observations from the source workbook. They do not, on their own, establish why the patterns occurred or prove that equipment condition causes higher installation costs.
 
-- **Finding:** What the chart or calculation shows.
-- **Evidence:** The measure, comparison, or values supporting the finding.
-- **Interpretation:** Why this pattern may matter to procurement operations.
-- **Recommendation:** A practical action that follows from the evidence.
+## Recommendations to Evaluate
 
-Areas to review may include high-spending hospitals or states, equipment condition by department, maintenance costs by equipment type, supplier delivery performance, and sourcing concentration. These are analysis areas, not conclusions established before checking results.
+After reconciling the measures, the analysis can support a review of:
 
-## Project Files
+- High-spending hospitals and states, including the drivers of their totals.
+- Departments with higher shares of equipment recorded as used or refurbished.
+- Equipment types with relatively high annual maintenance costs.
+- Supplier delivery-time differences and potential follow-up requirements.
+- Supplier-country concentration and sourcing resilience.
+- Installation-cost differences across condition groups, while considering equipment type, quantity and price.
 
-| Path | Contents |
+Recommendations should be tied to figures visible in the final workbook, and should not infer causation from descriptive comparisons alone.
+
+## Repository Structure
+
+| Path | Purpose |
 |---|---|
-| `README.md` | Project overview, business questions, method, and findings |
-| `data/` | Sanitized dataset, if cleared for public release |
-| `dashboard/` | Exported dashboard image |
-| `docs/` | Data description, project brief, and supporting documentation |
-| `video/` | Walkthrough link or video, subject to file-size limits |
+| `README.md` | Main case study and dashboard preview |
+| `docs/project-brief.md` | Field descriptions and original analysis questions |
+| `docs/data-dictionary.md` | Field-level definitions and sanitization notes |
+| `docs/data-quality-and-reconciliation.md` | Recalculated metrics and discrepancy checks |
+| `data/` | Sanitized dataset, once added and cleared for publication |
+| `dashboard/` | Dashboard image assets |
+| `video/` | Walkthrough information or a hosted video link |
+
+## Data Privacy
+
+The raw workbook contains supplier contact names, phone numbers and emails. The repository should only contain the sanitized copy unless permission to publish those details is confirmed. The workbook's original Pivot and Dashboard sheets were not populated as normal cell tables when inspected; the dashboard preview is therefore represented by the separate supplied screenshot.
 
 ## Limitations
 
-- Procurement records show recorded costs and equipment attributes; they do not by themselves explain why a cost occurred or why an item has a particular condition.
-- Delivery-time comparisons depend on reliable order and delivery dates and a consistent calculation.
-- Comparisons across equipment types may be affected by differences in quantity, unit price, and installation requirements.
-- Supplier-country proportions depend on the counting method. State the method clearly.
-- Recommendations should be proportional to the evidence and should not imply causation from descriptive comparisons alone.
+- Recorded data does not explain all reasons behind procurement cost or equipment condition.
+- Delivery comparisons assume ordered and delivered dates are valid.
+- Cost comparisons can be affected by differences in equipment, quantity, unit price and installation requirements.
+- Supplier distribution depends on whether the analysis counts rows, unique suppliers, or quantities; the chosen method must be stated.
 
 ---
 
-## Project Summary
-
-This project applies a business-question-led analytics workflow to medical equipment procurement data. The intended outcome is a documented dashboard analysis that makes procurement costs, equipment condition, and supplier performance easier to examine.
+*This case study documents the path from procurement questions to data validation and visual analysis. It will be updated as the workbook calculations and published artifacts are finalised.*
